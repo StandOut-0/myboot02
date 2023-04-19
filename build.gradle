@@ -15,8 +15,15 @@ repositories {
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-jdbc')
 	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')//mybatis
 	implementation('org.apache.tomcat.embed:tomcat-embed-jasper')//톰캣으로 실행하기 위해 설정
     implementation('javax.servlet:jstl:1.2')//jsp를 사용하기 위해 설정
+    implementation fileTree(dir: 'libs', include: ['*.jar'])//해당경로 파일을 읽는다.
+    implementation files('libs/ojdbc6.jar')//해당 파일을 로컬 레퍼지토리에 추가.
+    implementation('org.apache.tiles:tiles-jsp:3.0.4')//타일즈
+    implementation 'org.springframework.boot:spring-boot-devtools'//devtools 추가
+    implementation 'org.projectlombok:lombok'//lombok추가
+     
 	runtimeOnly('com.h2database:h2')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	 

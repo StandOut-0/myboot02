@@ -1,4 +1,3 @@
-package com.myboot02;
 
 
 import org.springframework.boot.SpringApplication;
