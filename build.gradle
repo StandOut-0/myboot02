@@ -13,10 +13,13 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation('org.springframework.boot:spring-boot-starter-jdbc')
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.apache.tomcat.embed:tomcat-embed-jasper')//톰캣으로 실행하기 위해 설정
+    implementation('javax.servlet:jstl:1.2')//jsp를 사용하기 위해 설정
+	runtimeOnly('com.h2database:h2')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	 
 }
 
 tasks.named('test') {
